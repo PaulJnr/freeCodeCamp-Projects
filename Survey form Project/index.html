@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./styles.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Survey Form</title>
+</head>
+<body>
+    <!-- heading and description -->
+    <div class="form-header">
+        <h1 id="title">Survey Form</h1>
+    <p id="description">Please complete this survey to help us improve our servives.</p>
+    </div>
+    
+    <!-- beginning of the survey form -->
+    <form action="https://register-demo.freecodecamp.org" method="post" id="survey-form">
+     <fieldset>
+        <legend>Personal Info:</legend>
+        <div class="name">
+            <label for="name" id="name-label">Name:
+                <input name="name" type="text" id="name" required placeholder="Enter your full name...">
+            </label>
+        </div>
+        <div class="emial">
+            <label for="email" id="email-label">Email:
+                <input name="email" type="email" id="email" required placeholder="Enter your email address...">
+            </label>
+        </div>
+        <div class="age">
+            <label for="number" id="number-label">Age:
+                <input type="number" id="number" min="15" max="120" placeholder="Enter your age in years...">
+            </label>
+        </div>
+        <div class="gender-container">
+            <p>Please specify your gender (this is for statiostical reasons)</p>
+            <label for="gender">
+                <input checked value="male" name="gender" type="radio">Male
+            </label>
+            <label for="gender">
+                <input value="female" name="gender" type="radio">Female
+            </label>
+            <label for="gender">
+                <input value="Non-binary" name="gender" type="radio">Non-binary
+            </label>
+            <label for="gender">
+                <input value="other" name="gender" type="radio">Other
+            </label>
+        </div>
+     </fieldset>   
+     <fieldset>
+        <legend>Survey Questions:</legend>
+        <div class="dropdown-container">
+            <label for="dropdown">How did you find out about our services?
+                <select name="referer" id="dropdown">
+                    <option value="">Select an option</option>
+                    <option value="1">Facebook</option>
+                    <option value="2">YouTube</option>
+                    <option value="3">Television Ad</option>
+                    <option value="4">Friend</option>
+                    <option value="5">Other</option>
+                </select>
+            </label>
+        </div>
+        <div class="dropdown-container">
+            <label for="dropdown">How satified are you with our services?
+                <select name="satisfaction" id="dropdown">
+                    <option value="">Select an option</option>
+                    <option value="1">Extremely satified</option>
+                    <option value="2">Satisfied</option>
+                    <option value="5">Neutral</option>
+                    <option value="3">Disatified</option>
+                    <option value="4">Extremely Disatified</option>
+                </select>
+            </label>
+        </div>
+        <div class="dropdown-container">
+            <label for="dropdown">From a scale of 1 to 5, how likely are you to recommend our services (1 being less likely and 5 being very likely)
+                <select name="recommendation" id="dropdown">
+                    <option value="">Select an option</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="5">3</option>
+                    <option value="3">4</option>
+                    <option value="4">5</option>
+                </select>
+            </label>
+        </div>
+        <div class="checkbox-container">
+            <p>Which of our serices did you get to use? (Check all that apply)</p>
+            <label for="checkbox">
+                <input type="checkbox" value="Marketing Services">Marketing Services
+            </label>
+            <label for="">    
+                <input type="checkbox" value="Brand Managing">Brand Managing
+            </label>
+            <label for="">    
+                <input type="checkbox" value="Content Curator">Content Curator
+            </label>
+            <label for="">    
+                <input type="checkbox" value="SEO">SEO
+            </label>
+        </div>
+
+        <div class="textarea-container">
+            <label for="textarea">Any additional comments?
+                <textarea name="additional-comments" id="textarea" cols="30" rows="5" placeholder="Please add your comments here..."></textarea>
+            </label>
+        </div>
+     </fieldset>
+     <div class="btn-container">
+        <label for="submit">
+            <input id="submit" type="submit">
+        </label>
+    </div>
+    </form>
+</body>
+</html>
